@@ -1,0 +1,175 @@
+{
+	"pages": [
+		{
+		    "path" : "pages/navigation/ShouYe/ShouYe",
+		   "style": {
+		   	"navigationStyle": "custom",
+		   	"app-plus": {  
+		   		 "titleView": false
+		   	  }
+		   }
+		    
+		},
+		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		//pages数组中第一项表示应用启动页
+		//#ifdef APP-PLUS
+		//启动页
+		{
+			"path": "pages/guide/judge",
+			"style": {
+				"enablePullDownRefresh": false,
+				"onReachBottomDistance": 100,
+				"navigationStyle": "custom",
+				"app-plus": {
+					"contentAdjust": false,
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/guide/guide",
+			"style": {
+				"enablePullDownRefresh": false,
+				"onReachBottomDistance": 100,
+				"navigationStyle": "custom",
+				"app-plus": {
+					"contentAdjust": false,
+					"bounce": "none"
+				}
+			}
+		},
+		// #endif
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		}
+	    ,{
+            "path" : "pages/login/login",
+            "style" :
+            {
+                "navigationStyle": "custom",
+                "app-plus": {  
+                	 "titleView": false
+                  },
+            	"enablePullDownRefresh": true
+            }
+            
+        }
+		,{
+		    "path" : "pages/login/register",
+		    "style" :
+		    {
+		        "navigationStyle": "custom",
+		        "app-plus": {  
+		        	 "titleView": false
+		          },
+		    	"enablePullDownRefresh": true
+		    }
+		    
+		}
+		,{
+		    "path" : "pages/navigation/Middle/Middle",
+		   "style": {
+		   	"navigationStyle": "custom",
+		   	"app-plus": {  
+		   		 "titleView": false
+		   	  }
+		   }
+		    
+		}
+		,{
+		    "path" : "pages/navigation/WoDe/WoDe",
+		    "style": {
+		    	"navigationStyle": "custom",
+		    	"app-plus": {  
+		    		 "titleView": false
+		    	  }
+		    }
+		    
+		}
+        ,{
+            "path" : "components/tabbar/tabbar",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/navigation/ShouYe/XiangQing/XiangQing",
+            "style" :
+            {
+                "navigationStyle": "custom",
+                "app-plus": {  
+                	 "titleView": false
+                  },
+            	"enablePullDownRefresh": true
+            }
+            
+        }
+		,{
+		    "path" : "pages/navigation/ShouYe/video/video",
+			"style": {
+				"app-plus":{
+					"titleNView":false,
+					"bounce":"none"
+				}
+			}
+		    
+		}
+        ,{
+            "path" : "pages/navigation/ShouYe/furniture_modeling/furniture_modeling",
+            "style" :
+            {
+                "navigationStyle": "custom",
+                "app-plus": {  
+                	 "titleView": false
+                  },
+            	"enablePullDownRefresh": true
+            }
+            
+        }
+		,{
+		    "path" : "pages/navigation/ShouYe/furniture_modeling/model_result",
+		    "style" :
+		    {
+		        "navigationStyle": "custom",
+		        "app-plus": {  
+		        	 "titleView": false
+		          },
+		    	"enablePullDownRefresh": true
+		    }
+		    
+		}
+        ,{
+            "path" : "pages/navigation/ShouYe/search/search",
+			"style" :
+		    {
+		        "navigationStyle": "custom",
+		        "app-plus": {  
+		        	 "titleView": false
+		          },
+		    	"enablePullDownRefresh": true
+		    }
+            
+        }
+        ,{
+            "path" : "pages/navigation/ShouYe/furniture_shop/furniture_shop",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+}

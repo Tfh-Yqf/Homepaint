@@ -1,0 +1,20 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:mysql://sh-cynosdbmysql-grp-2qr6s4ri.sql.tencentcdb.com:20461/homepainter?useSSL=false
+    username: root
+    password: 370105qihs0813QC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  type-aliases-package: com.homepainter.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    cn.itcast: debug
+
+
+
