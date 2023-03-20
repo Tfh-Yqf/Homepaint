@@ -1,17 +1,20 @@
 package com.homepainter.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.homepainter.service.DetectProductBeta;
 import com.tencentcloudapi.tiia.v20190529.models.DetectProductBetaResponse;
 import com.tencentcloudapi.tiia.v20190529.models.DetectProductResponse;
+import com.tencentcloudapi.tiia.v20190529.models.Product;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.homepainter.service.DetectProductBeta.Send_DetectProduct;
-import static com.homepainter.service.DetectProductBeta.Send_DetectProductBeta;
+import static com.homepainter.service.DetectProductBeta.*;
 
 
 @RestController
@@ -20,7 +23,7 @@ public class DetectProductController {
        调用商品识别接口，输入图片url,返回商品识别信息
     */
     @PostMapping("/DetectProduct")
-    public Map<String,Object> DetectProduct(@RequestBody Map<String,Object> body){
+    public Map<String,Object> DetectProduct(@RequestBody Map<String,Object> body) throws IOException {
         Map<String,Object> res = new HashMap<>();
         DetectProductResponse obj = null;
         if(body.get("image_url")!=null)
@@ -28,6 +31,11 @@ public class DetectProductController {
         else
             obj = Send_DetectProduct(body.get("image").toString(),false);
         // 将返回数据导入数据库
+        Product []product = obj.getProducts();
+        for (int i = 0; i < product.length; ++i){
+            //这个地方需要改一下路径
+            drawline("C:\\Users\\25697\\Desktop\\Homepaint\\HomePainter\\src\\main\\resources\\img.jpg", product[i].getXMin().intValue(), product[i].getXMax().intValue(), product[i].getYMin().intValue(), product[i].getYMax().intValue(), product[i].getName());
+        }
 
         // 给图片画框和加文字
 

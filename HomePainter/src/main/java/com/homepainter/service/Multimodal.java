@@ -13,8 +13,7 @@ import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 
 import com.tencentcloudapi.tiia.v20190529.TiiaClient;
 import com.tencentcloudapi.tiia.v20190529.models.*;
-import jdk.nashorn.internal.objects.Global;
-import jdk.nashorn.internal.parser.JSONParser;
+
 
 import java.io.File;
 import java.util.ArrayList;
