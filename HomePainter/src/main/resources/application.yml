@@ -6,6 +6,11 @@ spring:
     username: root
     password: 370105qihs0813QC
     driver-class-name: com.mysql.cj.jdbc.Driver
+  server:
+    tomcat:
+      #设定tomcat的basedir目录，如果没有指定则使用临时目录
+      basedir: /home/app/tomcat_upload_temp
+
 
 mybatis:
   type-aliases-package: com.homepainter.pojo
@@ -15,6 +20,10 @@ mybatis:
 logging:
   level:
     cn.itcast: debug
+
+
+
+
 
 
 

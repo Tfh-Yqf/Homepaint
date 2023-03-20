@@ -64,45 +64,6 @@ public class DetectProductBeta
         return null;
     }
 
-    public static void drawline(String pathname, int xmin, int xmax, int ymin, int ymax, String content) throws IOException {
-        BufferedImage img = ImageIO.read(new File(pathname));
-        Graphics2D graphics2D = img.createGraphics();
-        graphics2D.setColor(Color.CYAN);
-        graphics2D.setStroke(new BasicStroke(2f));
-        Font font = new Font("楷体", Font.BOLD, 22);
-        //xmin xmax ymin ymax
-        graphics2D.drawLine(xmin, ymax, xmax, ymax);
-        graphics2D.drawLine(xmin, ymax, xmin, ymin);
-        graphics2D.drawLine(xmin, ymin, xmax, ymin);
-        graphics2D.drawLine(xmax, ymax, xmax, ymin);
-        graphics2D.setFont(font);
 
-        int flag = 0;
-        if (ymin - 100 >= 0 && flag == 0){
-            graphics2D.drawLine(((xmin + xmax) / 2), ymin, (xmin + xmax) / 2 + 50, ymin - 50); //向上
-            flag = 1;
-            graphics2D.drawString(content, (xmin + xmax) / 2 + 50, ymin - 50);
-        }
-        if (xmax + 100 <= img.getWidth() && flag == 0) {
-            graphics2D.drawLine(xmax, (ymax + ymin) / 2, xmax + 50, (ymax + ymin) / 2 + 50);//向右
-            flag = 1;
-            graphics2D.drawString(content, xmax + 50, (ymax + ymin) / 2 + 50);
-        }
-        if (xmax - 100 >= 0 && flag == 0) {
-            graphics2D.drawLine(xmin, (ymax + ymin) / 2, xmax - 50, (ymax + ymin) / 2 + 50);//向左
-            flag = 1;
-            graphics2D.drawString(content, xmax - 50, (ymax + ymin) / 2 + 50);
-        }
-        if (ymax + 100 <= img.getHeight() && flag == 0) {
-            graphics2D.drawLine(((xmin + xmax) / 2), ymax, (xmin + xmax) / 2 + 50, ymax + 50); //向下
-            flag = 1;
-            graphics2D.drawString(content,(xmin + xmax) / 2 + 50, ymax + 50 );
-        }
-        if (flag == 0){
-            graphics2D.drawString(content,(xmin + xmax) / 2,(ymax + ymin) / 2) ;
-        }
-        //返回路径需要改一下
-        ImageIO.write(img, "JPEG", new FileOutputStream("E:\\a.jpg"));
-    }
 
 }

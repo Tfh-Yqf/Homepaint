@@ -1,4 +1,4 @@
-package com.homepainter.mapper;
+package com.homepainter.controller;
 
 import com.homepainter.util.MultipartFile2File;
 import com.qcloud.cos.model.PutObjectResult;
