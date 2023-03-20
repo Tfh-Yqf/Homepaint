@@ -54,14 +54,14 @@ public class DetectProductController {
         }
 
 
-        res = Draw_Upload_Image(image,detectProductResponse,use_url);
+        res = Draw_Upload_Image(image, detectProductResponse, use_url);
 
         return res;
     }
 
     @PostMapping("/DetectProductBeta")
-    public Map<String,Object> DetectProductBeta(@RequestBody Map<String,Object> body){
-        Map<String,Object> res = new HashMap<>();
+    public Map<String, Object> DetectProductBeta(@RequestBody Map<String,Object> body){
+        Map<String, Object> res = new HashMap<>();
         DetectProductBetaResponse obj = null;
         if(body.get("image_url")!=null)
             obj =  Send_DetectProductBeta(body.get("image_url").toString(),true);

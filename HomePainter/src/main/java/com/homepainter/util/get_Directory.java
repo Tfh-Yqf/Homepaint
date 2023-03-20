@@ -11,8 +11,8 @@ public class get_Directory {
      * @param filepath 路径
      */
     public static List<String> getAllFile(String filepath){
-        List<String> allFiles=new ArrayList<>();
-        findFolder(new File(filepath),allFiles);
+        List<String> allFiles = new ArrayList<>();
+        findFolder(new File (filepath), allFiles);
         return allFiles;
     }
 
@@ -24,8 +24,8 @@ public class get_Directory {
     private static void findFolder(File file,List<String> allFiles){
         if(file.isDirectory()){
             allFiles.add(file.getName());
-            File[] files= file.listFiles();
-            for(File f:files){
+            File[] files = file.listFiles();
+            for(File f : files){
                 findFolder(f,allFiles);
             }
         }else{

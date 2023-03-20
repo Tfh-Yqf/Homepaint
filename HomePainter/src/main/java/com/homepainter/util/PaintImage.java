@@ -32,10 +32,10 @@ public class PaintImage {
         graphics2D.drawString(content,(xmin + xmax) / 2 + 100,(ymax + ymin) / 2 - 50) ;
     }
 
-    public static File draw_lines(File file,String filename, Product[] products) throws IOException {
+    public static File draw_lines(File file, String filename, Product[] products) throws IOException {
         File file_res = null;
 
-        String fullname = "./search_result/"+filename;
+        String fullname = "./search_result/" + filename;
         BufferedImage img = ImageIO.read(file);
         Graphics2D graphics2D = img.createGraphics();
         graphics2D.setColor(Color.RED);
@@ -48,8 +48,8 @@ public class PaintImage {
         }
 
         //返回路径需要改一下
-        ImageIO.write(img, "JPEG", new FileOutputStream(fullname));
-        file_res =  new File(fullname);
+        if(ImageIO.write(img, "JPEG", new FileOutputStream(fullname)))
+            file_res =  new File(fullname);
         return file_res;
     }
 

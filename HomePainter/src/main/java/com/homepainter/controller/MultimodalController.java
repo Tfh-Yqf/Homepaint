@@ -32,12 +32,12 @@ public class MultimodalController {
     public Map<String,Object> MultiModal(@RequestBody Map<String,Object> data) throws IOException {
         // 结果数据集
         Map<String,Object> res = new HashMap<>();
-        res.put("code",1);
-        res.put("msg","API调用报错");
+        res.put("code", 1);
+        res.put("msg", "API调用报错");
         // url和base64分类
         boolean use_imageurl = false;
         String image = "";
-        if(data.get("image_url")!=null){
+        if(data.get("image_url") != null){
             use_imageurl = true;
             image = data.get("image_url").toString();
         }else{
@@ -46,31 +46,31 @@ public class MultimodalController {
         }
 
         // 图片匹配API
-        Map<String,Object> Image_Mate = search_image(image,use_imageurl);
-        if(Image_Mate==null)    return res;
+        Map<String,Object> Image_Mate = search_image(image, use_imageurl);
+        if(Image_Mate == null)    return res;
         res.put("Image_Mate",Image_Mate);
 
         // 执行通用图像标签API
-        DetectLabelProResponse detectLabelProResponse = DetectMLabelServie(image,use_imageurl);
-        if(detectLabelProResponse==null)    return res;
+        DetectLabelProResponse detectLabelProResponse = DetectMLabelServie(image, use_imageurl);
+        if(detectLabelProResponse == null)    return res;
         res.put("All_Flag",detectLabelProResponse);
 
         // 商业图片API
-        DetectProductBetaResponse product = Send_DetectProductBeta(image,use_imageurl);
-        if(product==null)   return res;
+        DetectProductBetaResponse product = Send_DetectProductBeta(image, use_imageurl);
+        if(product == null)   return res;
         res.put("product",product);
 
         // 图片识别API
         DetectProductResponse furniture_meta = Send_DetectProduct(image,use_imageurl);
-        if(product==null)   return res;
+        if(product == null)   return res;
         res.put("furniture_meta",furniture_meta);
         // 图片处理
         Map<String,Object> temp_res = Draw_Upload_Image(image,furniture_meta,use_imageurl);
         if(!temp_res.get("code").toString().equals("0"))    return res;
 
-        res.put("meta_reault",temp_res);
-        res.put("code",0);
-        res.put("msg","多模态检索成功");
+        res.put("meta_reault", temp_res);
+        res.put("code", 0);
+        res.put("msg", "多模态检索成功");
 
         return res;
     }
