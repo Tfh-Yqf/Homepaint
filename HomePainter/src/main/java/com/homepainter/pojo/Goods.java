@@ -12,7 +12,6 @@ import java.util.List;
 public class Goods {
     int goodsId;
     String title;
-    String subtitle;
     int storage;
     String detail;
 
