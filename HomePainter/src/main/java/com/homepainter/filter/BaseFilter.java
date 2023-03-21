@@ -37,6 +37,8 @@ public class BaseFilter implements Filter {
         String token = request.getHeader("token");
         // System.out.println(token);
         String tokenInfo = JSONObject.toJSONString(redisUtil.get(token));
+        if (tokenInfo == null) tokenInfo = "123";
+        if (token == null) token = "adwniveoqw";
         if ((token != null && redisUtil.hasKey(token)) && tokenInfo.contains("token") || token.equals("312") )   filterChain.doFilter(rp, servletResponse);
         else wrapper.sendRedirect("/user/error");
 
