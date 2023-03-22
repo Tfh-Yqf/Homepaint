@@ -22,7 +22,8 @@ public interface GoodsMapper {
                     column = "appraiseId",
                     javaType = List.class,
                     many = @Many(select = "com.homepainter.mapper.Goods_imageMapper.getAllImage")
-            )
+            ),
+
     })
     List<Goods> getAllGoods();
 
@@ -39,7 +40,16 @@ public interface GoodsMapper {
                     column = "appraiseId",
                     javaType = List.class,
                     many = @Many(select = "com.homepainter.mapper.Goods_imageMapper.getAllImage")
+            ),
+            @Result(
+                    property = "goodsId",
+                    column = "goodsId"
+            ),
+            @Result(
+                    property = "appraiseId",
+                    column = "appraiseId"
             )
+
     })
     List<Goods> getGoodsByContent(String searchContent);
     @Select("select * from goods where goodsId = #{goodsId}")
@@ -55,7 +65,15 @@ public interface GoodsMapper {
                     column = "appraiseId",
                     javaType = List.class,
                     many = @Many(select = "com.homepainter.mapper.Goods_imageMapper.getAllImage")
+            ),
+            @Result(
+                    property = "goodsId",
+                    column = "goodsId"
+            ),
+            @Result(
+                    property = "appraiseId",
+                    column = "appraiseId"
             )
     })
-    List<Goods> getGoodsById(int goodsId);
+    Goods getGoodsById(int goodsId);
 }

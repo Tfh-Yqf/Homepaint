@@ -15,7 +15,12 @@ public interface TiebaEvaluateMapper {
             @Result(property = "evaluateImage",
                     column = "evaluateId",
                     javaType = List.class,
-                    many = @Many(select = "com.homepainter.mapper.EvaluateImageMapper.getEvaluateImage"))
+                    many = @Many(select = "com.homepainter.mapper.EvaluateImageMapper.getEvaluateImage")),
+
+            @Result(
+                    property = "evaluateId",
+                    column = "evaluateId"
+            )
     })
     List<TiebaEvaluate> getTiebaEvaluate(int tiebaId);
 

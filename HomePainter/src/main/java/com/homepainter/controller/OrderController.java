@@ -81,4 +81,22 @@ public class OrderController {
         }
         return map;
     }
+
+    @PostMapping("/Post_list")
+    public Map<String, Object> getOrderList(){
+        Map<String, Object> map = new HashMap<>();
+        map.put("data", orderService.getOrderList());
+        map.put("code", 0);
+        map.put("msg", "查询订单列表成功！");
+        return map;
+    }
+
+    @PostMapping("/Post_detail")
+    public Map<String, Object> getOrderDetail(@RequestBody Map<String, Object> data){
+        Map<String, Object> map = new HashMap<>();
+        map.put("data", orderService.getOrderDetail((int) data.get("order_id")));
+        map.put("code", 0);
+        map.put("msg", "查询订单列表成功！");
+        return map;
+    }
 }

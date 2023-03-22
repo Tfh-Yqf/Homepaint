@@ -1,7 +1,9 @@
 package com.homepainter.service;
 
 import com.homepainter.mapper.AddressMapper;
+import com.homepainter.mapper.OrderMapper;
 import com.homepainter.pojo.Address;
+import com.homepainter.pojo.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +14,9 @@ public class OrderServiceImpl implements OrderService{
 
     @Autowired
     AddressMapper addressMapper;
+
+    @Autowired
+    OrderMapper orderMapper;
 
     @Override
     public int insertAddress(Address address) {
@@ -31,5 +36,15 @@ public class OrderServiceImpl implements OrderService{
     @Override
     public int deleteAddress(int addressId) {
         return addressMapper.deleteAddress(addressId);
+    }
+
+    @Override
+    public List<Order> getOrderList() {
+        return orderMapper.getOrderList();
+    }
+
+    @Override
+    public Order getOrderDetail(int orderId) {
+        return orderMapper.getOrderDetail(orderId);
     }
 }

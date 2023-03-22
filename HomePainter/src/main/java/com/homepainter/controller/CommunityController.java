@@ -25,7 +25,7 @@ public class CommunityController {
     RedisUtil redisUtil;
 
     @PostMapping("/list")
-    public Map<String, Object> getCommunityList(@RequestBody Map<String, Object> data){
+    public Map<String, Object> getCommunityList(){
         Map<String, Object> map = new HashMap();
         map.put("code", 0);
         map.put("msg", "社区信息查询成功！");

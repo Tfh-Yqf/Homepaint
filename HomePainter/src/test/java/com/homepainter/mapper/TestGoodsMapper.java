@@ -28,6 +28,6 @@ public class TestGoodsMapper {
 //        goodsMapper.getAllGoods().forEach(System.out::println);
 //        goodsMapper.getGoodsByContent("w").forEach(System.out::println);
 //        appraiseImageMapper.getAllImage().forEach(System.out::println);
-        goodsMapper.getGoodsById(21).forEach(System.out::println);
+        System.out.println(goodsMapper.getGoodsById(1));
     }
 }

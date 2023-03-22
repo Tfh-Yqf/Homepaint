@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletRequestWrapper;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpServletResponseWrapper;
 import java.io.BufferedReader;
@@ -32,14 +33,14 @@ public class BaseFilter implements Filter {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         if (request.getRequestURI().contains("/user"))  {filterChain.doFilter(servletRequest, servletResponse); return;}
         HttpServletResponseWrapper wrapper = new HttpServletResponseWrapper((HttpServletResponse) servletResponse);
-        MyRequestWrapper rp = new MyRequestWrapper(request);
-
+//        MyRequestWrapper rp = new MyRequestWrapper(request);
+        HttpServletRequestWrapper requestWrapper = new HttpServletRequestWrapper(request);
         String token = request.getHeader("token");
         // System.out.println(token);
         String tokenInfo = JSONObject.toJSONString(redisUtil.get(token));
         if (tokenInfo == null) tokenInfo = "123";
         if (token == null) token = "adwniveoqw";
-        if ((token != null && redisUtil.hasKey(token)) && tokenInfo.contains("token") || token.equals("312") )   filterChain.doFilter(rp, servletResponse);
+        if ((token != null && redisUtil.hasKey(token)) && tokenInfo.contains("token") || token.equals("312") )   filterChain.doFilter(requestWrapper, servletResponse);
         else wrapper.sendRedirect("/user/error");
 
     }

@@ -23,7 +23,7 @@ public class GoodsServiceImpl implements GoodsService{
     }
 
     @Override
-    public List<Goods> getGoodsById(int goodsId) {
+    public Goods getGoodsById(int goodsId) {
         return goodsMapper.getGoodsById(goodsId);
     }
 }

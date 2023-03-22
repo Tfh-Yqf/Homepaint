@@ -16,6 +16,11 @@ public interface Goods_appraiseMapper {
                     column = "appraiseId",
                     javaType = List.class,
                     many = @Many(select = "com.homepainter.mapper.Appraise_imageMapper.getAllImage")
+            ),
+
+            @Result(
+                    property = "appraiseId",
+                    column = "appraiseId"
             )
     })
     List<Goods_appraise> getAllAppraise();

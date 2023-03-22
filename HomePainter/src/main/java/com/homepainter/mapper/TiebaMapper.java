@@ -25,6 +25,11 @@ public interface TiebaMapper {
                     column = "tiebaId",
                     javaType = List.class,
                     many = @Many(select = "com.homepainter.mapper.TiebaImageMapper.getTiebaImage")
+            ),
+
+            @Result(
+                    property = "tiebaId",
+                    column = "tiebaId"
             )
     })
     List<Tieba> getTiebaList();
@@ -43,6 +48,11 @@ public interface TiebaMapper {
                     column = "tiebaId",
                     javaType = List.class,
                     many = @Many(select = "com.homepainter.mapper.TiebaImageMapper.getTiebaImage")
+            ),
+
+            @Result(
+                    property = "tiebaId",
+                    column = "tiebaId"
             )
     })
     List<Tieba> getTiebaById(int tiebaId);

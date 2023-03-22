@@ -30,6 +30,7 @@ public class UserController {
     public Map<String, Object> error(){
         Map<String, Object> map = new HashMap<>();
         map.put("code", "3");
+        map.put("msg", "token过期，请重新登录！");
         return map;
     }
 
@@ -57,6 +58,7 @@ public class UserController {
             redisUtil.set(token, "token" + telephone);
             redisUtil.expire(token, 54000);
         }
+
         else map.put("msg", "手机号或密码错误");
         return map;
     }

@@ -9,5 +9,5 @@ public interface GoodsService {
 
     List<Goods> getGoodsByContent(String searchContent);
 
-    List<Goods> getGoodsById(int goodsId);
+    Goods getGoodsById(int goodsId);
 }

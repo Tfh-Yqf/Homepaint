@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
 import java.io.IOException;
+import java.net.SocketException;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
@@ -39,6 +40,18 @@ public class GlobalExceptionHandler {
         Map<String, Object> map = new HashMap<>();
         map.put("code", 6);
         map.put("msg", "输入输出错误！");
+        return map;
+    }
+
+
+
+    @ExceptionHandler(Exception.class)
+    @ResponseBody
+    public Map<String, Object> SocketHandler(IOException e){
+        e.printStackTrace();
+        Map<String, Object> map = new HashMap<>();
+        map.put("code", 7);
+        map.put("msg", "其他错误！");
         return map;
     }
 

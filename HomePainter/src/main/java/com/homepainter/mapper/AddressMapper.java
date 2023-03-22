@@ -12,6 +12,10 @@ public interface AddressMapper {
 
     @Select("select * from address")
     List<Address> getAllAddress();
+
+    @Select("select * from address where addressId = #{addressId}")
+    Address getAddressById(int addressId);
+
     @Insert("insert into address values (#{addressId}, #{province}, #{city}, #{county}, #{address}, #{phone}, #{nickname})")
     int insertAddress(Address address);
 
