@@ -6,6 +6,7 @@ import com.homepainter.pojo.EvaluateImage;
 import com.homepainter.pojo.TiebaEvaluate;
 import com.homepainter.service.CommunityService;
 import com.homepainter.service.CommunityServiceImpl;
+import com.homepainter.service.TranslateService;
 import com.homepainter.util.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +24,9 @@ public class CommunityController {
 
     @Autowired
     RedisUtil redisUtil;
+
+    @Autowired
+    TranslateService translateService;
 
     @PostMapping("/list")
     public Map<String, Object> getCommunityList(){
@@ -76,4 +80,8 @@ public class CommunityController {
         return map;
     }
 
+    @PostMapping("/translate")
+    public List<JSONObject> translate(@RequestBody List<JSONObject> jsonObjects) throws Exception {
+        return translateService.translateJson(jsonObjects);
+    }
 }

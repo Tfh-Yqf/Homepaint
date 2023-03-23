@@ -24,6 +24,8 @@ public class CommunityService implements CommunityServiceImpl {
     @Autowired
     EvaluateImageMapper evaluateImageMapper;
 
+
+
     @Override
     public List<Tieba> getTiebaList() {
         return tiebaMapper.getTiebaList();

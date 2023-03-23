@@ -1,0 +1,25 @@
+package com.homepainter.service;
+
+import com.alibaba.fastjson.JSONObject;
+import com.aliyun.tea.TeaException;
+import com.homepainter.util.Sample;
+import com.homepainter.util.Translate;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class TranslateService {
+
+    public List <JSONObject> translateJson(List <JSONObject> jsonObjects) throws Exception {
+        for (JSONObject jsonObject : jsonObjects){
+            jsonObject.put("super-category", Translate.translateEnToZh((String) jsonObject.get("super-category")));
+            jsonObject.put("category", Translate.translateEnToZh((String) jsonObject.get("category")));
+            jsonObject.put("style", Translate.translateEnToZh((String) jsonObject.get("style")));
+            jsonObject.put("material", Translate.translateEnToZh((String) jsonObject.get("material")));
+            jsonObject.put("theme", Translate.translateEnToZh((String) jsonObject.get("theme")));
+        }
+;
+        return jsonObjects;
+    }
+}
