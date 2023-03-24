@@ -21,6 +21,7 @@ public class TranslateService {
             jsonObject.put("theme", Translate.translateEnToZh((String) jsonObject.get("theme")));
             translationCount++;
             System.out.println("图片翻译进行数目：" + translationCount);
+            System.out.println("次");
         }
 ;
         return jsonObjects;
