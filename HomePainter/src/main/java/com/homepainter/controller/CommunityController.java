@@ -80,8 +80,5 @@ public class CommunityController {
         return map;
     }
 
-    @PostMapping("/translate")
-    public List<JSONObject> translate(@RequestBody List<JSONObject> jsonObjects) throws Exception {
-        return translateService.translateJson(jsonObjects);
-    }
+
 }

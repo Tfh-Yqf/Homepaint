@@ -1,10 +1,13 @@
 package com.homepainter.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.homepainter.service.GoodsService;
+import com.homepainter.service.TranslateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -13,6 +16,9 @@ public class GoodsController {
 
     @Autowired
     GoodsService goodsService;
+
+    @Autowired
+    TranslateService translateService;
 
     @GetMapping("/get_list")
     public Map<String, Object> getAllList(){
@@ -40,6 +46,11 @@ public class GoodsController {
         map.put("code", 0);
         map.put("msg", "查询订单成功！");
         return map;
+    }
+
+    @PostMapping("/translate")
+    public List<JSONObject> translate(@RequestBody List<JSONObject> jsonObjects) throws Exception {
+        return translateService.translateJson(jsonObjects);
     }
 
 
