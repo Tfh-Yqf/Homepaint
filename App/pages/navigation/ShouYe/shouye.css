@@ -1,0 +1,107 @@
+	.button_next{
+		background-color: #fae27e;
+		width: 95px;
+		height: 35px;
+		border-radius: 15px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	.house{
+		width: 100%;
+		height: 200px;
+		margin-top: 12.5px;
+		background: url('@/static/navgiation/ShouYe/bac.png');
+		background-size: 100% 100%;
+	}
+	
+	.search_bar{
+		border-radius: 25px;
+		width: 100%;
+		background-color: white;
+		height: 40px;
+		margin-top: 44px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	
+	.big_group{
+		width: 95%;
+		margin-left: 2.5%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.select_area{
+		width: 75px;
+		background-color: #FFFFFF;
+		border-radius: 15px;
+		height: 30px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 14px;
+		font-weight: bold;
+		flex-shrink: 0;
+	}
+	
+	.select_area.active{
+		background-color: #fae27e;
+		color: #000000;
+	}
+	
+	.select_area.notfirst{
+		margin-left: 10px;
+	}
+	
+	.diplay_col{
+		margin-left: 0%;
+		width: 100%;
+		column-count: 2; // 设置显示2列
+		column-gap: 1%; //设置或检索对象的列与列之间的间隙为30upx
+		margin: auto;
+		margin-top: 10px;
+	}
+	.diplay_inl{
+		display: inline-block;
+		background-color: #FFFFFF;
+		margin-top: 7.5px;
+	}
+	.sen_618{
+		background-color: #FAD961;
+		background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+		color: #FFFFFF;
+		font-weight: 600;
+		font-size: 13px;
+		border-radius: 10upx;
+	}
+	.diplay_view{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	.title{
+		width: 100%;
+		font-size: 15px;
+		-webkit-line-clamp:2;
+		display: -webkit-box;
+		text-overflow: ellipsis;
+		-webkit-box-orient:vertical;
+		overflow: hidden;;
+		font-weight: bold;
+	}
+	.price{
+		display: flex;
+		flex-direction: row;
+		margin-top: 2px;
+		
+	}
+	.huang_border{
+		color: #f6a358;
+		font-size: 11px;
+		border-radius: 5upx;
+		
+		border: 1px solid #f6a358;
+	}

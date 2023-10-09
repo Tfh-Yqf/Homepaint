@@ -1,0 +1,415 @@
+{
+	"pages": [
+		{
+			"path": "pages/navigation/ShouYe/ShouYe",
+			"style": {
+				"enablePullDownRefresh": true,
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleView": false
+				}
+			}
+			
+		},
+		//启动页
+		{
+			"path": "pages/guide/judge",
+			"style": {
+				"enablePullDownRefresh": false,
+				"onReachBottomDistance": 100,
+				"navigationStyle": "custom",
+				"app-plus": {
+					"contentAdjust": false,
+					"bounce": "none"
+				}
+			}
+		},
+		
+		{
+			"path": "pages/guide/guide",
+			"style": {
+				"enablePullDownRefresh": false,
+				"onReachBottomDistance": 100,
+				"navigationStyle": "custom",
+				"app-plus": {
+					"contentAdjust": false,
+					"bounce": "none"
+				}
+			}
+		},
+
+
+	// 	{
+	// 		"path": "pages/navigation/ShouYe/ShouYe",
+	// 		"style": {
+	// 			"navigationStyle": "custom",
+	// 			"app-plus": {
+	// 				"titleView": false
+	// 			}
+	// 		}
+	
+	// 	},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		}, {
+			"path": "pages/login/login",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleView": false
+				},
+				"enablePullDownRefresh": true
+			}
+
+		}, {
+			"path": "pages/login/register",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleView": false
+				},
+				"enablePullDownRefresh": true
+			}
+
+		}, {
+			"path": "pages/navigation/Middle/Middle",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleView": false
+				}
+			}
+
+		}, {
+			"path": "pages/navigation/WoDe/WoDe",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleView": false
+				}
+			}
+
+		}, {
+			"path": "components/tabbar/tabbar",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/navigation/ShouYe/XiangQing/XiangQing",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleView": false
+				},
+				"enablePullDownRefresh": true
+			}
+
+		}
+		// ,{
+		//     "path" : "pages/navigation/ShouYe/video/video",
+		// 	"style": {
+		// 		"app-plus":{
+		// 			"titleNView":false,
+		// 			"bounce":"none"
+		// 		}
+		// 	}
+
+		// }
+		, {
+			"path": "pages/navigation/ShouYe/furniture_modeling/furniture_modeling",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleView": false
+				},
+				"enablePullDownRefresh": true
+			}
+
+		}, {
+			"path": "pages/navigation/ShouYe/furniture_modeling/model_result",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleView": false
+				},
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/navigation/ShouYe/furniture_shop/furniture_shop",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationBarBackgroundColor": "#fa436a",
+				"navigationBarTextStyle": "white",
+				"app-plus": {
+					"titleNView": false,
+					"bounce": "none"
+				}
+			}
+
+		},
+		{
+			"path": "pages/commponent/search/search",
+			"style": {
+				"navigationBarTitleText": "搜索",
+				"navigationBarBackgroundColor": "#F8F8F8"
+			}
+		}, {
+			"path": "pages/navigation/ShouYe/furniture_shop/classList",
+			"style": {
+				"navigationBarTitleText": "商品列表",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false,
+					"bounce": "none"
+				}
+			}
+		}, {
+			"path": "pages/shop/goods/MutiModel",
+			"style": {
+				"navigationBarTitleText": "多模态检索结果",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false,
+					"bounce": "none"
+				}
+			}
+		}, {
+			"path": "pages/shop/goods/goodsDetails",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "商品详情"
+			}
+		}, {
+			"path": "pages/shop/goods/goodsEvaluate",
+			"style": {
+				"navigationBarTitleText": "所有评价",
+				"navigationBarBackgroundColor": "#F8F8F8",
+				"app-plus": {
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/navigation/WoDe/shoucang/mycollection",
+			"style": {
+				"navigationBarTitleText": "我的收藏",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false,
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/shop/goods/cart",
+			"style": {
+				"navigationBarTitleText": "购物车",
+				"app-plus": {
+					"titleNView": false,
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/shop/goods/order/confirmOrder",
+			"style": {
+				"navigationBarTitleText": "确认订单",
+				"navigationBarBackgroundColor": "#F8F8F8"
+			}
+		},
+		{
+			"path": "pages/shop/goods/myaddress",
+			"style": {
+				"navigationBarTitleText": "收货地址",
+				"navigationBarBackgroundColor": "#F8F8F8",
+
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/shop/goods/address/edit",
+			"style": {
+				"navigationBarTitleText": "编辑收货地址",
+				"navigationBarBackgroundColor": "#F8F8F8"
+			}
+		},
+		{
+			"path": "pages/shop/goods/order/success",
+			"style": {
+				"navigationBarTitleText": "支付结果",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/shop/goods/order/orderList",
+			"style": {
+				"navigationBarTitleText": "我的订单",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false,
+					"bounce": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/shop/goods/order/orderDetails",
+			"style": {
+				"navigationBarTitleText": "订单详情",
+				"navigationBarBackgroundColor": "#F8F8F8"
+			}
+		},
+		{
+			"path": "pages/shop/goods/order/evaluate/evaluate",
+			"style": {
+				"navigationBarTitleText": "商品评价",
+				"navigationBarBackgroundColor": "#F8F8F8"
+			}
+		}, {
+			"path": "pages/draw/draw2D",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleView": false
+				}
+			}
+
+		}
+	    ,{
+            "path" : "pages/family/Myfaily",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleView": false
+				}
+			}
+            
+        }
+        ,{
+            "path" : "pages/navigation/WoDe/YINSI/YINSI",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleView": false
+				}
+			}
+            
+        }
+        ,{
+            "path" : "pages/navigation/Middle/AR/AR",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleView": false
+				}
+			}
+            
+        }
+        ,{
+            "path" : "pages/draw/draw3d",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleView": false
+				}
+			}
+            
+        }
+        ,{
+            "path" : "pages/draw/UploadImage",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleView": false
+				}
+			}
+            
+        }
+		,{
+		    "path" : "pages/navigation/ShouYe/XiangQing/yijian",
+			"style": {
+				"navigationBarTitleText": "一键装修",
+				"navigationBarBackgroundColor": "#F8F8F8"
+			}
+		}
+        ,{
+            "path" : "pages/SheQu/SheQuList/SheQuList",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleView": false
+				},
+				"enablePullDownRefresh": true
+			}
+            
+        }
+        ,{
+            "path" : "pages/navigation/ShouYe/furniture_shop/floorList",
+			"style": {
+				"navigationBarTitleText": "商品列表",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": false,
+					"bounce": "none"
+				}
+			}
+            
+        }
+        ,{
+            "path" : "pages/navigation/ShouYe/XiangQing/yindao",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/draw/ChangeStyle",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleView": false
+				},
+				"enablePullDownRefresh": true
+			}
+            
+        }
+        ,{
+            "path" : "pages/navigation/ShouYe/furniture_shop/ChooseRoom",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleView": false
+				},
+				"enablePullDownRefresh": true
+			}
+            
+        }
+        ,{
+            "path" : "pages/navigation/ShouYe/furniture_modeling/result",
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleView": false
+				},
+				"enablePullDownRefresh": false
+			}
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "次世代家装",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+}
